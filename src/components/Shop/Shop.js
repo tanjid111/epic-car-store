@@ -31,7 +31,8 @@ const Shop = () => {
             </div>
             <div>
                 <h3>Selected Cars: {cart.length}</h3>
-                <p>Name: {car.name}</p>
+
+
             </div>
         </div>
     );
