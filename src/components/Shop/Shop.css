@@ -29,3 +29,14 @@
         display: block;
     }
 }
+
+@media screen and (min-width:501px) and (max-width:768px){
+
+    .cars-container{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-container{
+        display: block;
+    }
+}

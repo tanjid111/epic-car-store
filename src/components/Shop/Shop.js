@@ -17,7 +17,13 @@ const Shop = () => {
 
     const handleAddToCart = (car) => {
         const newCart = [...cart, car];
-        setCart(newCart);
+        if (newCart.length > 4) {
+            alert('You cannot choose more than 4')
+        }
+        else {
+            setCart(newCart);
+        }
+
     }
 
     const arrayLength = cart.length;

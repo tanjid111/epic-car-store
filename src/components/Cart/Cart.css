@@ -2,14 +2,11 @@
      position: sticky;
     top: 0; 
     padding-left: 100px;
-    /* display: flex;  */
-    justify-content: center;
-    align-items: center; 
     
 }
 
 .cart{
-     /* display: flex;  */
+     
      justify-content: center;
      align-items: center; 
      
@@ -23,7 +20,17 @@
            
 }
 
-.car-text{
-    margin-bottom:20px ;
+
+@media screen and (max-width:500px){
+    .cart-container{
+       padding-left: 0; 
+       text-align: center;
+   }    
 }
 
+@media screen and (min-width:501px) and (max-width:768px){
+    .cart-container{   
+        padding-left: 0;
+        text-align: center; 
+    }
+ }
