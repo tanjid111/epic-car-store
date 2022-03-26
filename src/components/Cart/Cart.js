@@ -2,16 +2,33 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const { car, randomCart } = props;
-    const { picture, name } = car;
-    console.log(props);
+
+    const { cart, chooseOne, chooseAgain } = props;
+
+
 
     return (
         <div>
-            <div className='cart'>
-                <img src={picture} alt=""></img>
-                <p className='text'>Name: {name}</p>
-                <p>{randomCart.name}</p>
+            <div className='cart-container'>
+                <h3>Selected Cars</h3>
+                <div className='cart'>
+                    {
+                        cart.map(car => (<h5 key={car.id}>
+                            <img src={car.picture} alt=""></img>
+                            {car.name}</h5>))
+                    }
+                </div>
+
+
+
+                <button onClick={() => chooseOne()}>
+                    <p>Choose One For Me</p>
+                </button>
+
+                <button onClick={() => chooseAgain()}>
+                    <p>Choose Again</p>
+                </button>
+
             </div>
 
         </div>

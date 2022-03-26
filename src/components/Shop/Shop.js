@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Car from '../Car/Car';
 import Cart from '../Cart/Cart';
+import RandomAnswer from '../RandomAnswer/RandomAnswer';
 import './Shop.css'
 
 const Shop = () => {
@@ -18,12 +19,17 @@ const Shop = () => {
         const newCart = [...cart, car];
         setCart(newCart);
     }
+
     const arrayLength = cart.length;
     const chooseOne = () => {
         const randNum = Math.floor(Math.random() * (arrayLength));
         const chosen = cart[randNum]
-
         setRandomCart(chosen);
+    }
+
+    const chooseAgain = () => {
+        setCart([]);
+        setRandomCart([]);
     }
 
     return (
@@ -34,22 +40,17 @@ const Shop = () => {
                         key={car.id}
                         car={car}
                         handleAddToCart={handleAddToCart}
-
                     ></Car>)
                 }
             </div>
             <div className='cart-container'>
-                <h3>Selected Cars</h3>
-                {
-                    cart.map(car => <Cart
-                        key={car.id}
-                        car={car}
-                        randomCart={randomCart}
-                    ></Cart>)
-                }
-                <button onClick={() => chooseOne()}>
-                    <p>Choose One For Me</p>
-                </button>
+                <Cart
+                    cart={cart}
+                    chooseOne={chooseOne}
+                    chooseAgain={chooseAgain}
+                ></Cart>
+
+                <RandomAnswer randomCart={randomCart}></RandomAnswer>
 
 
             </div>
