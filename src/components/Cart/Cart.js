@@ -2,19 +2,18 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const { car } = props;
+    const { car, randomCart } = props;
     const { picture, name } = car;
-    // console.log(cart);
+    console.log(props);
 
     return (
         <div>
             <div className='cart'>
                 <img src={picture} alt=""></img>
                 <p className='text'>Name: {name}</p>
+                <p>{randomCart.name}</p>
             </div>
-            <button>
-                <p>Choose One For Me</p>
-            </button>
+
         </div>
     );
 };
