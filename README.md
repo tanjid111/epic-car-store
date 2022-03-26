@@ -1,4 +1,4 @@
-Welcome to the Epic Car Store Github Repository
+# Welcome to the Epic Car Store Github Repository
 
 Live link: https://epic-car-store.netlify.app/
 
