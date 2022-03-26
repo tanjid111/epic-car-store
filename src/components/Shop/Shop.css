@@ -1,17 +1,22 @@
 .shop-container{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 2fr;
 }
 
-/* .cars-container{
+.cars-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     margin: 100px 50px;
-}  */
+}  
 
-/* @media screen and (max-width:500px){
-    .products-container{
+@media screen and (max-width:500px){
+
+    .cars-container{
     grid-template-columns: repeat(1, 1fr);
     }
-} */
+
+    .shop-container{
+        display: block;
+    }
+}

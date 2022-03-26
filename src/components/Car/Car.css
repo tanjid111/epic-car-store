@@ -1,0 +1,42 @@
+.car{
+    width: 300px;
+    height: 450px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 6px;
+
+}
+
+.car img{
+width: 300px;
+height: 300px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.car-info{
+    margin-left: 14px;
+}
+
+.car-info p{
+margin-bottom: 0;
+}
+
+.car-name{
+    font-weight: 400;   
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 5px;
+}
+
+.btn-cart{
+    width: 100%;
+    background-color:bisque;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.btn-cart:hover{
+    background-color: orange;
+    cursor: pointer;
+}
